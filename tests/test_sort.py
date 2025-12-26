@@ -7,8 +7,6 @@ Tests the sorting functionality for the awesome-python README.md file.
 """
 
 import os
-import tempfile
-import shutil
 import pytest
 from sort import sort_blocks, main
 
