@@ -7,3 +7,10 @@ site/
 
 # PyCharm IDE
 .idea
+
+# Pytest cache
+.pytest_cache/
+__pycache__/
+*.egg-info/
+.coverage
+htmlcov/

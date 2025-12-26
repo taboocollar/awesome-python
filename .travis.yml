@@ -3,7 +3,12 @@ language: python
 python:
   - "3.6"
 
+install:
+  - pip install -r requirements.txt
+  - pip install -r requirements-dev.txt
+
 script:
+  - pytest tests/ --cov=sort
   - python sort.py
   - cp README.md docs/index.md
   - mkdocs build

@@ -2,6 +2,29 @@
 
 Your contributions are always welcome!
 
+## Test-Driven Development (TDD)
+
+This project follows Test-Driven Development practices. When contributing code changes:
+
+1. **Write tests first**: Before implementing new features or fixing bugs, write tests that describe the expected behavior.
+2. **Run tests**: Execute the test suite to verify your tests fail initially (Red phase).
+3. **Implement code**: Write the minimum code necessary to make your tests pass (Green phase).
+4. **Refactor**: Improve code quality while ensuring all tests still pass (Refactor phase).
+5. **Submit with tests**: All pull requests with code changes must include corresponding tests.
+
+### Running Tests
+
+```bash
+# Install development dependencies
+pip install -r requirements-dev.txt
+
+# Run all tests
+pytest tests/
+
+# Run tests with coverage
+pytest tests/ --cov=sort --cov-report=term-missing
+```
+
 ## Guidelines
 
 * Add one link per Pull Request.
