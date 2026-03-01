@@ -1192,6 +1192,67 @@ Where to discover learning resources or new Python libraries.
 * [Python Test](https://podcast.pythontest.com/)
 * [The Real Python Podcast](https://realpython.com/podcasts/rpp/)
 
+# Development and Testing
+
+This project uses Test-Driven Development (TDD) practices to ensure code quality and reliability.
+
+## Running Tests
+
+The project uses [pytest](https://pytest.org/) as the testing framework.
+
+### Installation
+
+Install the development dependencies:
+
+```bash
+pip install -r requirements-dev.txt
+```
+
+### Running All Tests
+
+To run all tests:
+
+```bash
+pytest tests/
+```
+
+### Running Tests with Coverage
+
+To run tests with coverage report:
+
+```bash
+pytest tests/ --cov=sort --cov-report=term-missing
+```
+
+### Running Specific Tests
+
+To run a specific test file:
+
+```bash
+pytest tests/test_sort.py
+```
+
+To run a specific test:
+
+```bash
+pytest tests/test_sort.py::TestMain::test_main_sorts_links_alphabetically
+```
+
+## Test Structure
+
+- `tests/` - Contains all test files
+- `tests/test_sort.py` - Unit tests for the `sort.py` module
+
+## Writing Tests
+
+When contributing new code, please follow TDD principles:
+
+1. Write tests first that describe the expected behavior
+2. Run the tests and see them fail
+3. Implement the minimum code necessary to make the tests pass
+4. Refactor if needed while keeping tests green
+5. Ensure all tests pass before submitting a pull request
+
 # Contributing
 
 Your contributions are always welcome! Please take a look at the [contribution guidelines](https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md) first.
